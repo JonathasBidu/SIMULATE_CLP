@@ -1,0 +1,168 @@
+# Jnela principal
+BoxLayout:
+    orientation: 'vertical'
+    canvas.before:
+        Color:
+            rgba: 0.3, 0.3, 0.3, 1
+
+        Rectangle:
+            pos: self.pos
+            size: self.size
+
+   # Cabeçalho
+    BoxLayout:
+        orientation: 'horizontal'
+        padding: [20, 10]
+        spacing: 10
+        size_hint_y: 0.1
+
+        canvas.before:
+            Color:
+                rgba: 0.1, 0.1, 0.3, 1  # Azul escuro bonito
+            RoundedRectangle:
+                pos: self.pos
+                size: self.size
+                radius: [15]
+
+        # Espaçador à esquerda
+        Widget:
+            size_hint_x: 0.2
+
+        Label:
+            text: 'Supervisório de Usinas'
+            font_size: 30
+            bold: True
+            halign: 'center'
+            valign: 'middle'
+            text_size: self.size
+            size_hint_x: 0.6
+
+        Label:
+            id: relogio
+            text: '00:00'
+            font_size: 25
+            halign: 'right'
+            valign: 'middle'
+            text_size: self.size
+            size_hint_x: 0.2
+            
+
+    # Área das usinas
+    BoxLayout:
+        orientation: 'horizontal'
+        size_hint_y: 0.7
+        padding: 10
+        spacing: 10
+        
+        # Usina 1
+        BoxLayout:
+            orientation: 'vertical'
+            canvas.before:
+                Color:
+                    rgba: 0.5, 0.55, 0.6, 1
+                RoundedRectangle:
+                    pos: self.pos
+                    size: self.size
+                    radius: [15]
+            Label:
+                text: "Usina 1"
+                font_size: 25
+                bold: True
+                size_hint_y: 0.15
+
+            BoxLayout:
+                size_hint_y: None
+                height: 50
+                padding: 0
+                AnchorLayout:
+                    anchor_x: 'center'
+                    anchor_y: 'center'
+                    Image:
+                        id: conexão_1
+                        source: "IMGs/conectado.png"
+                        size_hint: None, None
+                        size: 80, 80
+
+            Image:
+                source: 'IMGs/UTBM.png'
+                allow_stretch: True
+                keep_ratio: True
+
+        # Usina 2
+        BoxLayout:
+            orientation: 'vertical'
+            canvas.before:
+                Color:
+                    rgba: 0.5, 0.55, 0.6, 1
+                RoundedRectangle:
+                    pos: self.pos
+                    size: self.size
+                    radius: [15]
+
+            Label:
+                text: "Usina 2"
+                font_size: 25
+                bold: True
+                size_hint_y: 0.15
+            
+            BoxLayout:
+                size_hint_y: None
+                height: 50
+                padding: 0
+                AnchorLayout:
+                    anchor_x: 'center'
+                    anchor_y: 'center'
+                    Image:
+                        id: conexão_2
+                        source: "IMGs/conectado.png"
+                        size_hint: None, None
+                        size: 80, 80
+        
+            Image:
+                source: 'IMGs/UTBM.png'
+                allow_stretch: True
+                keep_ratio: True
+        
+        # Usina 3
+        BoxLayout:
+            orientation: 'vertical'
+            canvas.before:
+                Color:
+                    rgba: 0.5, 0.55, 0.6, 1
+                RoundedRectangle:
+                    pos: self.pos
+                    size: self.size
+                    radius: [15]
+
+            Label:
+                text: "Usina 3"
+                font_size: 25
+                bold: True
+                size_hint_y: 0.15
+
+            BoxLayout:
+                size_hint_y: None
+                height: 50
+                padding: 0
+                AnchorLayout:
+                    anchor_x: 'center'
+                    anchor_y: 'center'
+                    Image:
+                        id: conexão_3
+                        source: "IMGs/conectado.png"
+                        size_hint: None, None
+                        size: 80, 80
+        
+            Image:
+                source: 'IMGs/UTBM.png'
+                allow_stretch: True
+                keep_ratio: True
+        
+    # Rodapé
+    BoxLayout:
+        orientation: 'vertical'
+        size_hint_y: 0.4
+        padding: 10
+        spacing: 10
+        
+    
